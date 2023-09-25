@@ -18,7 +18,7 @@
 
 # 📖 React Portfolio <a name="about-project"></a>
 
-**React Portfolio** is a version of my portfolio in react
+**React Portfolio** is a version of my portfolio in reactjs
 
 ## 🛠 Built With <a name="built-with"></a>
 
