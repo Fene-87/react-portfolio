@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>Portfolio</h1>
+      <h1>My Portfolio</h1>
     </>
   )
 }
