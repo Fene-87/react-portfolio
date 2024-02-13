@@ -1,0 +1,17 @@
+.gradient {
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  background: linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67, 0.8), rgb(44, 83, 100, 0.4));
+}
+
+.gradient-1 {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(67, 67, 67, 0.6)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header-text {
+  background: linear-gradient(90deg, rgba(245, 88, 0, 1) 0%, rgba(255, 111, 0, 0.8) 30%, rgba(255, 180, 0, 1) 100%);
+  color: transparent;
+  background-clip: text;
+}
