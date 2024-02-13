@@ -1,10 +1,11 @@
 import React from "react";
+import './info.css';
 
 const Info = () => {
     return (
         <div className="relative h-[100vh] w-full bg-[url(../../../assets/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg)] bg-cover
              bg-center" >
-            <div className="p-5 h-full w-full flex flex-col md:flex-row gap-10 bg-gradient-to-tl from-purple-900 to-green-700">
+            <div className="p-5 h-full w-full flex flex-col md:flex-row gap-10 gradient-1">
                 <ul className="flex justify-between md:justify-normal md:flex-col pt-0 md:pt-[18rem] w-[300px] md:w-[30px] ">
                     <li className="text-[25px] md:text-[40px] text-[#cfcfcf] cursor-pointer hover:text-white">a</li>
                     <li className="text-[25px] md:text-[40px] text-[#cfcfcf] cursor-pointer hover:text-white">b</li>
