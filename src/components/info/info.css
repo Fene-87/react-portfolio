@@ -15,3 +15,13 @@
   color: transparent;
   background-clip: text;
 }
+
+.works-card-info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.works-card-tag {
+  background-color: rgba(255, 255, 255, 0.24);
+}
