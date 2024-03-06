@@ -94,13 +94,14 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className="mt-10">
-                <div className="flex items-center gap-5">
+            <div className="mt-10 md:mt-16">
+                <div className="flex items-center gap-5 text-[#091e42] text-[16px] md:text-[24px]">
                     <h4>Filter by</h4>
                     <select 
                     name="" 
                     id=""
                     value={filterValue}
+                    className="text-[12px] md:text-[20px]"
                     onChange={handleFilter}
                     >
                         <option value="all">All</option>
@@ -112,7 +113,7 @@ const Projects = () => {
                     </select>
                 </div>
 
-                <div className="md:grid md:grid-cols-3 gap-10 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 pb-10">
                     {projectDetails.map((detail) => (
                         <ProjectCard 
                           itemDetail={detail}
