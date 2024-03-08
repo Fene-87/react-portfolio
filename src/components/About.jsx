@@ -1,6 +1,11 @@
 import React from 'react'
+import Resume from '/assets/mark-resume.pdf';
 
 const About = () => {
+  const downloadResume = () => {
+
+  }
+
   return (
     <div className='w-full bg-[#1c1a19] p-5 md:p-20'>
         <div>
@@ -11,7 +16,9 @@ const About = () => {
                     Look through some of my work and experience! If you like what you see and have a 
                     project you need coded, don't hestiate to contact me.
                 </p>
-                <button type='button' className='bg-[#ff6b00] p-3 text-white text-xl font-medium rounded-md mt-10'>Get my resume</button>
+                <a href={Resume} download="mark-resume.pdf">
+                    <button type='button' className='bg-[#ff6b00] p-3 text-white text-xl font-medium rounded-md mt-10 hover:text-[#cfcfcf]'>Get my resume</button>
+                </a>
             </div>
             <div></div>
         </div>
