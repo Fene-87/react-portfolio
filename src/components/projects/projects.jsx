@@ -73,7 +73,7 @@ const Projects = () => {
     }
 
     return (
-        <div className="h-full w-full p-5 pt-20 md:p-20">
+        <div className="w-full p-5 pt-20 md:p-20">
             <div className="flex flex-col md:flex-row gap-10 md:gap-5 mt-0 md:mt-10">
                 <h2 className="text-[#091e42] text-center md:text-left font-medium text-[32px] md:text-[40px] max-w-full md:min-w-[320px]">My Recent Works</h2>
                 <div>
@@ -113,7 +113,7 @@ const Projects = () => {
                     </select>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 pb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 ">
                     {projectDetails.map((detail) => (
                         <ProjectCard 
                           itemDetail={detail}
