@@ -1,11 +1,15 @@
 import React from 'react'
 import Resume from '/assets/mark-resume.pdf';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngular, faCss3, faDocker, faGit, faGithub, faGitlab, faHtml5, faJs, faLaravel, faNodeJs, faPhp, faPython, faReact, faUnity } from '@fortawesome/free-brands-svg-icons';
+import { SiClickup, SiExpress, SiFlask, SiDjango, SiTailwindcss, SiJest, SiMongodb, SiMysql, SiRubyonrails } from "react-icons/si";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
+import { DiRuby } from "react-icons/di";
+import { TbBrandNextjs, TbBrandThreejs } from "react-icons/tb";
+import { BsFiletypeScss } from "react-icons/bs";
+import { languages, frameworks, skills } from '../data/SkillsData';
 
 const About = () => {
-  const downloadResume = () => {
-
-  }
-
   return (
     <div className='w-full bg-[#1c1a19] p-5 md:p-20'>
         <div>
@@ -28,43 +32,41 @@ const About = () => {
         <div className='flex justify-around'>
             <ul>
                 <li className='text-[#cfcfcf] text-[24px] md:text-[32px] border-b-2 md:border-none'><span></span>Languages</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>JavaScript</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>TypeScript</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Python</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Ruby</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>PHP</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>HTML</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>CSS</li>
+                {languages.map((language, index) => (
+                    <li key={index} className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>
+                        {language.type === 'font-awesome' ? (
+                            <span><FontAwesomeIcon icon={language.icon} /> {language.name}</span>
+                        ) : (
+                            <span className='flex items-center gap-1'><language.icon /> {language.name}</span>
+                        )}
+                    </li>
+                ))}
             </ul>
 
             <ul>
                 <li className='text-[#cfcfcf] text-[24px] md:text-[32px] border-b-2 md:border-none'><span></span>Frameworks</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>ReactJs</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>AngularJs</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>NodeJs</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>NextJs</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>ThreeJs</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Express</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Flask</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Django</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Ruby on Rails</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Laravel</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>SCSS</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Tailwind CSS</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>RSpec</li>
+                {frameworks.map((framework, index) => (
+                    <li key={index} className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>
+                        {framework.type === 'font-awesome' ? (
+                            <span><FontAwesomeIcon icon={framework.icon} /> {framework.name}</span>
+                        ) : (
+                            <span className='flex items-center gap-1'><framework.icon /> {framework.name}</span>
+                        )}
+                    </li>
+                ))}
             </ul>
 
             <ul>
                 <li className='text-[#cfcfcf] text-[24px] md:text-[32px] border-b-2 md:border-none'><span></span>Skills & DB</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>GitHub</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Git</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>GitLab</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Docker</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Clickup</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>Unity</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>MongoDB</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>PostgreSQL</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>MySQL</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGithub} /></span> GitHub</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGit} /></span> Git</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGitlab} /></span> GitLab</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faDocker} /></span> Docker</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiClickup /> Clickup</span></li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faUnity} /></span> Unity</li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiMongodb /> MongoDB</span></li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><BiLogoPostgresql /> PostgreSQL</span></li>
+                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiMysql /> MySQL</span></li>
             </ul>
         </div>
     </div>
