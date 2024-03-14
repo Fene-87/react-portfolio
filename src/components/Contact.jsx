@@ -5,9 +5,9 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-  const YOUR_SERVICE_ID = process.env.YOUR_SERVICE_ID;
-  const YOUR_TEMPLATE_ID = process.env.YOUR_TEMPLATE_ID;
-  const YOUR_PUBLIC_KEY = process.env.YOUR_PUBLIC_KEY;
+  const YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
+  const YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+  const YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
 
   const form = useRef();
 
