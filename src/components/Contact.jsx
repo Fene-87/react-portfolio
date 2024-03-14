@@ -1,11 +1,29 @@
-import React from 'react';
-import { useForm } from "react-hook-form"
+import React, { useRef } from 'react';
+import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-  const onSubmit = () => {
+  const YOUR_SERVICE_ID = process.env.YOUR_SERVICE_ID;
+  const YOUR_TEMPLATE_ID = process.env.YOUR_TEMPLATE_ID;
+  const YOUR_PUBLIC_KEY = process.env.YOUR_PUBLIC_KEY;
 
+  const form = useRef();
+
+  const onSubmit = () => {
+    emailjs
+      .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, {
+        publicKey:  YOUR_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   }
 
   return (
@@ -18,6 +36,7 @@ const Contact = () => {
       </div>
 
       <form 
+        ref={form}
         action="" 
         className='flex flex-col'
         onSubmit={handleSubmit(onSubmit)}
@@ -25,9 +44,9 @@ const Contact = () => {
         <label className='hidden' htmlFor="full_name">Full name</label>
         <input 
           type="text" 
-          name="full_name" 
+          name="user_name" 
           id="full_name"
-          {...register("fullName", {
+          {...register("user_name", {
             required: {
               value: true,
               message: "Full name cannot be blank",
@@ -40,9 +59,9 @@ const Contact = () => {
         <label className='hidden' htmlFor="email">Email address</label>
         <input
           type="email" 
-          name="email" 
+          name="user_email" 
           id="email" 
-          {...register("email", {
+          {...register("user_email", {
             required: {
               value: true,
               message: "Email cannot be blank",
