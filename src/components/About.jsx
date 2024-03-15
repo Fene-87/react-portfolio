@@ -1,12 +1,6 @@
 import React from 'react'
 import Resume from '/assets/mark-resume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngular, faCss3, faDocker, faGit, faGithub, faGitlab, faHtml5, faJs, faLaravel, faNodeJs, faPhp, faPython, faReact, faUnity } from '@fortawesome/free-brands-svg-icons';
-import { SiClickup, SiExpress, SiFlask, SiDjango, SiTailwindcss, SiJest, SiMongodb, SiMysql, SiRubyonrails } from "react-icons/si";
-import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
-import { DiRuby } from "react-icons/di";
-import { TbBrandNextjs, TbBrandThreejs } from "react-icons/tb";
-import { BsFiletypeScss } from "react-icons/bs";
 import { languages, frameworks, skills } from '../data/SkillsData';
 
 const About = () => {
@@ -58,15 +52,15 @@ const About = () => {
 
             <ul>
                 <li className='text-[#cfcfcf] text-[24px] md:text-[32px] border-b-2 md:border-none'><span></span>Skills & DB</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGithub} /></span> GitHub</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGit} /></span> Git</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faGitlab} /></span> GitLab</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faDocker} /></span> Docker</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiClickup /> Clickup</span></li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span><FontAwesomeIcon icon={faUnity} /></span> Unity</li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiMongodb /> MongoDB</span></li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><BiLogoPostgresql /> PostgreSQL</span></li>
-                <li className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'><span className='flex items-center gap-1'><SiMysql /> MySQL</span></li>
+                {skills.map((skill, index) => (
+                    <li key={index} className='text-[#cfcfcf] text-[15px] md:text-[20px] leading-[42px]'>
+                        {skill.type === 'font-awesome' ? (
+                            <span><FontAwesomeIcon icon={skill.icon} /> {skill.name}</span>
+                        ) : (
+                            <span className='flex items-center gap-1'><skill.icon /> {skill.name}</span>
+                        )}
+                    </li>
+                ))}
             </ul>
         </div>
     </div>
