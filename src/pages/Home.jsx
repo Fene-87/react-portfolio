@@ -5,16 +5,19 @@ import Projects from "../components/projects/projects";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ProjectPopup from "../components/ProjectPopup";
 
 const Home = () => {
     return (
         <div className="absolute w-[100%] h-[100%]">
           <Navbar />
+          <ProjectPopup />
           <Info />
           <Projects />
           <About />
           <Contact />
           <Footer />
+          
         </div>
     )
 }

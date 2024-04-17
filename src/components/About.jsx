@@ -5,7 +5,7 @@ import { languages, frameworks, skills } from '../data/SkillsData';
 
 const About = () => {
   return (
-    <div className='w-full bg-[#1c1a19] p-5 md:p-20'>
+    <div className='w-full bg-[#1c1a19] p-5 md:p-20' id='about'>
         <div>
             <div>
                 <h1 className='text-[#f55800] text-6xl font-semibold leading-[80px] tracking-wide'>About me</h1>

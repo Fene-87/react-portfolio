@@ -17,10 +17,10 @@ const Navbar = () => {
             
             <ul className={`h-[100vh] md:h-[3vh] md:flex z-[-1] bg-[#3e3c3c] md:z-auto absolute md:static items-center gap-10 top-[-400px] transition-all
                 ease-in duration-500 w-full md:w-auto left-0 p-5 ${closedMenu ? 'top-[4.8rem] md:top-0' : 'top-[-700px] md:top-0'}`}>
-                <li className="cursor-pointer hover:text-[#d3d3d3]">Portfolio</li>
-                <li className="cursor-pointer hover:text-[#d3d3d3] my-10 md:my-0">About</li>
+                <li className="cursor-pointer hover:text-[#d3d3d3]"><a href="#portfolio">Portfolio</a></li>
+                <li className="cursor-pointer hover:text-[#d3d3d3] my-10 md:my-0"><a href="#about">About</a></li>
                 <li className="cursor-pointer hover:text-[#d3d3d3] my-10 md:my-0">Blog</li>
-                <li className="cursor-pointer hover:text-[#d3d3d3] my-10 md:my-0">Contact</li>
+                <li className="cursor-pointer hover:text-[#d3d3d3] my-10 md:my-0"><a href="#contact">Contact</a></li>
             </ul>
         </div>
     )
