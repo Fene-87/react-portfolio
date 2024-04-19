@@ -5,3 +5,7 @@
 * {
   scroll-behavior: smooth;
 }
+
+.popup-header {
+  font-family: 'Roboto', sans-serif;
+}
