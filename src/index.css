@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.popup-header {
+  font-family: 'Roboto', sans-serif;
+}
+
+.popup-text {
+  font-family: 'Inter', sans-serif;
+}

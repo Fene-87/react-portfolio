@@ -27,7 +27,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='h-full w-full flex flex-col md:flex-row p-5 md:p-20 gap-20 items-start md:items-center justify-center'>
+    <div id='contact' className='h-full w-full flex flex-col md:flex-row p-5 md:p-20 gap-20 items-start md:items-center justify-center'>
       <div>
         <p className='text-[#091e42] w-[455px] text-4xl leading-[52px] font-bold text-center md:text-start'>
             I'm always interested in hearing about new projects, so

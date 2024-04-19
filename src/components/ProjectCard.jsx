@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { displayDetails, openPopup } from '../../redux/popupSlice';
 
 const ProjectCard = ({ itemDetail }) => {
   const techStack = itemDetail.technologies;
@@ -6,6 +8,13 @@ const ProjectCard = ({ itemDetail }) => {
   const cardBackground = {
     backgroundImage: `url(${itemDetail.featuredImage})`,
   };
+
+  const dispatch = useDispatch()
+
+  const seeProject = () => {
+    dispatch(openPopup())
+    dispatch(displayDetails(itemDetail))
+  }
 
   return (
     <div  style={cardBackground} className='border bg-scroll bg-center bg-no-repeat bg-cover max-w-[350px] md:max-w-[400px] h-[450px] flex flex-col rounded-t-lg overflow-hidden'>
@@ -18,7 +27,7 @@ const ProjectCard = ({ itemDetail }) => {
             ))}
         </div>
       </div>
-      <button className='w-full bg-[#ff6b00] p-3 text-white text-xl font-medium' type='button'>See Project</button>
+      <button className='w-full bg-[#ff6b00] p-3 text-white text-xl font-medium' type='button' onClick={seeProject}>See Project</button>
     </div>
   )
 }
