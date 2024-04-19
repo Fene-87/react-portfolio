@@ -3,6 +3,8 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from 'react-redux';
 import { closePopup } from '../../redux/popupSlice';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const ProjectPopup = () => {
   const dispatch = useDispatch();
@@ -28,15 +30,15 @@ const ProjectPopup = () => {
           <FontAwesomeIcon icon={faX} className='text-[#091e42] cursor-pointer' onClick={close} />
         </div>
 
-        <div className='border flex items-start justify-between mt-10 h-[80%] gap-5'>
-          <div>
-            <img src={info.featuredImage} alt="" />
+        <div className='flex items-start justify-between mt-10 h-[80%] gap-5'>
+          <div className='h-[80%]'>
+            <img className='h-full' src={info.featuredImage} alt={info.name} />
           </div>
-          <div className='flex flex-col h-full justify-between'>
-            <p className='text-[#091e42]'>{info.description}</p>
-            <div className='flex'>
-              <button>Live Demo</button>
-              <button>Github Repo</button>
+          <div className='flex flex-col h-[80%] justify-between'>
+            <p className='text-[#091e42] popup-text w-[315px] md:w-[424px] font-normal text-base leading-6 md:leading-[30px]'>{info.description}</p>
+            <div className='flex gap-3'>
+              <button className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.liveLink} target='_blank' className='flex items-center justify-center gap-2'>Live Demo <FaArrowUpRightFromSquare /></a></button>
+              <button className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.sourceLink} target='_blank'>Github Repo <FontAwesomeIcon icon={faGithub} /></a></button>
             </div>
           </div>
         </div>
