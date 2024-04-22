@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { closePopup } from '../../redux/popupSlice';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { motion } from 'framer-motion';
 
 const ProjectPopup = () => {
   const dispatch = useDispatch();
@@ -37,8 +38,8 @@ const ProjectPopup = () => {
           <div className='flex flex-col h-[80%] justify-between'>
             <p className='text-[#091e42] popup-text w-[315px] md:w-[424px] font-normal text-base leading-6 md:leading-[30px]'>{info.description}</p>
             <div className='flex gap-3'>
-              <button className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.liveLink} target='_blank' className='flex items-center justify-center gap-2'>Live Demo <FaArrowUpRightFromSquare /></a></button>
-              <button className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.sourceLink} target='_blank'>Github Repo <FontAwesomeIcon icon={faGithub} /></a></button>
+              <motion.button whileTap={{ scale: 0.8 }} className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.liveLink} target='_blank' className='flex items-center justify-center gap-2'>Live Demo <FaArrowUpRightFromSquare /></a></motion.button>
+              <motion.button whileTap={{ scale: 0.8 }} className='w-[150px] h-[40px] bg-[#ff6b00] text-white font-bold text-[17px]'><a href={info.sourceLink} target='_blank'>Github Repo <FontAwesomeIcon icon={faGithub} /></a></motion.button>
             </div>
           </div>
         </div>

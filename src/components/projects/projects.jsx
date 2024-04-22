@@ -27,7 +27,7 @@ const Projects = () => {
             </div>
 
             <div className="flex flex-col  md:flex-row md:gap-20 mt-16">
-                <img src={photo} alt="Mark-profile" className="border h-[237px] md:h-[448px] w-[327px] md:w-[684px] object-contain self-center" />
+                <img src={photo} alt="Mark-profile" className=" h-[237px] md:h-[448px] w-[327px] md:w-[684px] object-contain self-center" />
                 <div>
                     <h3 className="text-[#091e42] text-[32px] md:text-[40px] font-medium mt-10 md:mt-0">Multi-Post Stories</h3>
                     <p className="text-[#091e42] text-[16px] md:text-[24px] w-[350px] md:w-[448px] leading-[25px] md:leading-[30px] mt-5 md-mt-10 ">
