@@ -1,6 +1,69 @@
 const projectsDetails = [
     {
       id: 1,
+      name: 'CF Park',
+      description: 'Built a full web platform for a football turf and kids’ academy serving 300+ young players. I designed and implemented the public-facing website plus an internal admin system that centralizes pitch bookings, kid registrations, and attendance tracking. The admin panel lets staff manage training groups, view player lists, monitor session attendance, and organize bookings from one place, reducing manual follow-ups and WhatsApp chaos.',
+      featuredImage: '/assets/cfdashboard.png',
+      technologies: ['React', 'ASP.NET Core', 'Postgresql'],
+      liveLink: 'https://www.collegeframe.co.ke/',
+      sourceLink: 'n/a',
+    },
+    {
+      id: 2,
+      name: 'ATS',
+      description: 'Designed and built an end-to-end applicant tracking system for managing the full hiring pipeline — from job posting to offer. The platform lets recruiters create roles, track candidates through custom stages, and collaborate on feedback in one place. I also implemented an AI resume screening feature that parses CVs, scores candidates against role requirements, and surfaces the strongest matches first. This cuts down the time spent manually reading resumes and helps hiring teams focus on the most relevant applicants faster.',
+      featuredImage: '/assets/atsdashboard.png',
+      technologies: ['Python FastAPI', 'React', 'Postgresql'],
+      liveLink: 'N/A',
+      sourceLink: 'N/A',
+    },
+    {
+      id: 3,
+      name: 'Ticket Management System',
+      description: 'This is a Jira/ClickUp-inspired ticketing platform for managing work across multiple projects. Users can create projects, add and assign tickets, set priorities and deadlines, and move work through custom statuses on a Kanban board. The system gives teams a clear view of what’s in the backlog, in progress, and done, making it easier to coordinate tasks and reduce things slipping through the cracks.',
+      featuredImage: '/assets/tmcreate.png',
+      technologies: ['ASP.NET Core', 'Blazor', 'Postgresql'],
+      liveLink: 'N/A',
+      sourceLink: 'N/A',
+    },
+    {
+      id: 4,
+      name: 'Leave Manager',
+      description: 'A leave management platform to streamline how teams request, approve, and track time off. Employees can submit leave requests, view their balances, and check approval status in one place, while managers get a clear dashboard to review requests, see overlaps, and approve or reject with comments. The system automatically updates leave balances and highlights scheduling conflicts, reducing back-and-forth emails and making workforce planning much easier.',
+      featuredImage: '/assets/leavemngdashboard.png',
+      technologies: ['Python FastAPI', 'Angular', 'DevExtreme'],
+      liveLink: 'N/A',
+      sourceLink: 'N/A',
+    },
+    // {
+    //   id: 5,
+    //   name: 'POS',
+    //   description: 'A POS system to handle end-to-end sales operations for small and medium businesses. Cashiers can add items, apply discounts, accept multiple payment methods, and print receipts from a fast, simple interface, while the back office tracks inventory, daily sales, and top-selling products. The system integrates with M-Pesa for seamless mobile payments and supports optional eTIMS integration for compliant, automated e-invoicing and reporting.',
+    //   featuredImage: '/assets/Artgallery.PNG',
+    //   technologies: ['HTML', 'CSS', 'JavaScript'],
+    //   liveLink: 'https://fene-87.github.io/Module-1-Capstone/',
+    //   sourceLink: 'https://github.com/Fene-87/Module-1-Capstone',
+    // },
+    {
+      id: 6,
+      name: 'Prediction Market',
+      description: 'A prediction markets platform where users create markets on future events, buy and sell “shares” in different outcomes, and watch prices move as collective beliefs change. The system updates implied probabilities in real time based on trading activity, settles markets automatically once results are known, and tracks user performance over time with simple stats and leaderboard views. Admin tools handle market creation, resolution, and moderation to keep markets fair and transparent.',
+      featuredImage: '/assets/predictalanding.png',
+      technologies: ['Python FastAPI', 'React', 'Postgresql'],
+      liveLink: 'N/A',
+      sourceLink: 'N/A',
+    },
+    {
+      id: 7,
+      name: 'Email Notification System',
+      description: 'This is an email notification platform for apps that need reliable single, bulk, and group email sending. Authenticated users can manage contacts and groups, compose campaigns, and see per-recipient delivery status (queued, sent, failed, bounced) in one place. Emails are processed via a background job queue (Oban + Swoosh) with priority levels, while admins can manage users, upgrade them to a gold plan, and enable advanced features like retrying failed deliveries and group-based sending.',
+      featuredImage: '/assets/ensdashboard.png',
+      technologies: ['Elixir', 'Phoenix LiveView', 'Postgresql'],
+      liveLink: 'N/A',
+      sourceLink: 'N/A',
+    },
+    {
+      id: 8,
       name: 'Book Ease Reservation',
       description: 'This is a robust and user-friendly Room Reservation Application built using the Ruby on Rails framework. With its intuitive interface and powerful features, this app aims to streamline the hotel booking process for both guests and hotel staff.',
       featuredImage: '/assets/Book-ease-home.PNG',
@@ -8,9 +71,8 @@ const projectsDetails = [
       liveLink: 'https://book-ease.onrender.com/',
       sourceLink: 'https://github.com/Fene-87/hotel-room-reservation-front-end',
     },
-  
     {
-      id: 2,
+      id: 9,
       name: 'Budget Tracker',
       description: 'Budget Tracker is a Ruby on Rails mobile web application designed to empower users in effectively managing their budgets. It provides a user-friendly interface and a range of features to assist users in budget planning and tracking.',
       featuredImage: '/assets/Budget-tracker.PNG',
@@ -18,9 +80,8 @@ const projectsDetails = [
       liveLink: 'https://budget-tracker-lkkh.onrender.com/',
       sourceLink: 'https://github.com/Fene-87/budget_app',
     },
-  
     {
-      id: 3,
+      id: 10,
       name: 'Space Travellers Hub',
       description: 'A web application whose aim is to facilitate a company that provides commercial and scientific space travel services. The application gets real live data from the SpaceX API. It allows users to book rockets and join selected space missions.',
       featuredImage: '/assets/Space-travellers.PNG',
@@ -28,9 +89,8 @@ const projectsDetails = [
       liveLink: 'https://space-travelers-hub-bbxn.onrender.com/',
       sourceLink: 'https://github.com/Fene-87/space-travelers-hub',
     },
-  
     {
-      id: 4,
+      id: 11,
       name: 'CryptoMetrics',
       description: 'CryptoMetrics is a comprehensive web application that provides users with detailed information about various cryptocurrencies. Stay up-to-date with real-time data, market trends, and key metrics for a wide range of digital currencies',
       featuredImage: '/assets/CryptoMetrics.PNG',
@@ -38,9 +98,8 @@ const projectsDetails = [
       liveLink: 'https://cryptometrics.onrender.com/',
       sourceLink: 'https://github.com/Fene-87/cryptometrics',
     },
-  
     {
-      id: 5,
+      id: 12,
       name: 'BookStore CMS',
       description: 'A simple React/Redux project that allows users to display a list of books, add a book , and delete a particular book.',
       featuredImage: '/assets/Bookstorecms.PNG',
@@ -48,9 +107,8 @@ const projectsDetails = [
       liveLink: 'https://bookstore-i0bx.onrender.com/',
       sourceLink: 'https://github.com/Fene-87/Bookstore',
     },
-  
     {
-      id: 6,
+      id: 13,
       name: 'Art Gallery',
       description: 'This simple web application is a cutting-edge web application designed to captivate art enthusiasts and create an immersive experience within the world of contemporary art. Whether you\'re an avid art collector, a curious newcomer, or simply seeking a dose of creative inspiration, this website is here to ignite your passion for the arts.',
       featuredImage: '/assets/Artgallery.PNG',
